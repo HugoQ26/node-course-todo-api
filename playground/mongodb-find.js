@@ -39,7 +39,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 	// 	console.log(err);
 	// })
 
-	var us = db.collection('Users')
+	var us = db.collection('Users');
 
 	us.find({name: "Marcin"}).toArray().then((docs) => {
 		var list = JSON.stringify(docs, undefined, 2);
@@ -53,7 +53,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 		})
 	}).catch((err) => {
 		console.log(err);
-	})
+	});
 
 
 	// db.close();

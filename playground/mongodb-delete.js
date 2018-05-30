@@ -34,7 +34,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 		console.log(`You just deleted ${res.lastErrorObject.n} input: ${JSON.stringify(res.value, undefined, 2)}`);
 	}).then(() => {
 		us.deleteMany({name: 'Marcin'}).then((res) => {
-			console.log(`You just deleted ${res.result.n} input...`);
+			console.log(`You just deleted ${res.CommandResult.result.n} input`);
 		})
 	})
 
